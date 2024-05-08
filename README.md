@@ -9,3 +9,23 @@ Retrieving Data From the command line: https://omniweb.gsfc.nasa.gov/html/comman
 `app.py` is the main file which is part of our pipeline for OMNI (and eventually Deep GP).
 
 To run an app locally (deploy instructions to follow), do `python {app_filename.py}`.
+
+
+SWPC Data Products: https://services.swpc.noaa.gov/products/solar-wind/
+
+Scrap JSON file for latest 7 day plasma quantities (from DSCOVR spacecraft) using curl: 
+
+```bash
+curl -H "Accept:json" https://services.swpc.noaa.gov/products/solar-wind/plasma-7-day.json 
+```
+
+Scrap using Python:
+```python
+import urllib.request
+import json
+
+with urllib.request.urlopen("https://services.swpc.noaa.gov/products/solar-wind/plasma-7-day.json") as url:
+    data = json.loads(url.read().decode())
+    print(data)
+```
+

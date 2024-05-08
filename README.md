@@ -16,7 +16,7 @@ SWPC Data Products: https://services.swpc.noaa.gov/products/solar-wind/
 Scrap JSON file for latest 7 day plasma quantities (from DSCOVR spacecraft) using curl: 
 
 ```bash
-curl -H "Accept:json" https://services.swpc.noaa.gov/products/solar-wind/plasma-7-day.json 
+curl -H "Accept:json" -X GET https://services.swpc.noaa.gov/products/solar-wind/plasma-7-day.json -o plasma-7-day.json
 ```
 
 Scrap using Python:

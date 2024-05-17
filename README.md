@@ -29,3 +29,5 @@ with urllib.request.urlopen("https://services.swpc.noaa.gov/products/solar-wind/
     print(data)
 ```
 
+**Credits**:
+Hongfan Chen - Development of Deep GP for dBH and providing notebooks and data (`OMNI_Download.ipynb`) as guides for porting the model to Dash.
